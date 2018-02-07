@@ -47,12 +47,89 @@
 
     .close {
       background: none;
-      color: white;
+      color: black;
       border: 0;
     }
 
-    .gallery {}
+    .gallery {
 
+      display: grid;
+      /*since we dont know how many can fit, we use aut-fill and we want all to be 100px wide*/
+      grid-template-columns: repeat(auto-fill, 100px);
+      /* sizing the implicit rows */
+      grid-auto-rows: 100px;
+      grid-auto-flow: dense;
+
+    }
+
+    .item {
+      overflow: hidden;
+      display: grid;
+
+      /* for overlapping */
+      grid-template-columns: 1;
+      grid-template-columns: 1;
+    }
+
+    .item img {
+      grid-column: 1/-1;
+      grid-row: 1/-1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .item__overlay {
+      background: #ffc60032;
+      grid-column: 1/-1;
+      grid-row: 1/-1;
+      position: relative;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      transition: 0.2s;
+      transform: translateY(100%);
+    }
+
+    .item:hover .item__overlay {
+      transform: translateY(0);
+    }
+
+    .item__overlay button {
+      background: none;
+      border: 2px solid white;
+      color: white;
+      text-transform: uppercase;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 5px;
+    }
+
+
+
+    .item.v2 {
+      grid-row: span 2
+    }
+
+    .item.v3 {
+      grid-row: span 3
+    }
+
+    .item.v4 {
+      grid-row: span 4
+    }
+
+
+    .item.h2 {
+      grid-column: span 2
+    }
+
+    .item.h3 {
+      grid-column: span 3
+    }
+
+    .item.h4 {
+      grid-column: span 4
+    }
 
 
     .overlay {
@@ -68,12 +145,15 @@
 
     .overlay.open {
       display: grid;
+      justify-items: center;
+      align-items: center;
     }
 
-    .overlay figure {
+    .overlay-inner {
       background: white;
       width: 700px;
       padding: 20px;
+
     }
 
     .overlay img {
@@ -84,7 +164,83 @@
   <script>
     const gallery = document.querySelector('.gallery');
     const overlay = document.querySelector('.overlay');
+    const overlayImage = overlay.querySelector('img');
+    const overlayClose = overlay.querySelector('.close');
+
+    // HTML GENERATOR FUNCTION
+    function generateHTML([h, v]) {
+      return `
+      <div class="item h${h} v${v}">
+      <img src='images/${randomNumber(12)}.jpg'>
+      <div class="item__overlay">
+      <button>View </button>
+      </div>
+      </div>`;
+    }
+
+    // FUNCTION TO GENEREATE A RANDOM NUMBER BETWEEN 1 AND 12
+    function randomNumber(limit) {
+      return Math.floor(Math.random() * limit) + 1
+    }
+
+    function handleClick(e) {
+      console.log(e.currentTarget);
+      const src = e.currentTarget.querySelector('img').src;
+      overlayImage.src = src;
+      open();
+    }
+
+    function open() {
+      overlay.classList.add('open');
+    }
+
+
+
+    function close() {
+      overlay.classList.remove('open');
+    }
+
+    //CREATING AN ARRAY OF ARRAYS WITH 50 BLANK SPOTS
+    // Array.from takes an length and map function.
+
+    const digits = Array.from({
+      length: 50
+    }, () => [randomNumber(4), randomNumber(4)]).concat([
+      [1, 1],
+      [1, 1],
+      [1, 1],
+      [1, 1],
+      [1, 1],
+      [1, 1],
+      [1, 1],
+      [1, 1],
+      [1, 1],
+      [1, 1],
+      [1, 1],
+      [1, 1],
+      [1, 1],
+      [1, 1],
+      [1, 1],
+      [1, 1],
+      [1, 1],
+      [1, 1]
+    ]);
+
+    //IMMEDIATELY DESTRUCTED THE ARRAT OF ARRAYS
+    const html = digits.map(generateHTML).join('');
+    console.log(html);
+
+
+    //PUSH GENERATED CONTENT INTO GALLERY
+    gallery.innerHTML = html;
+    //BUTTON FUNCTIONALITY
+    const items = document.querySelectorAll('.item');
+    items.forEach(item => item.addEventListener('click', handleClick));
+
+    overlayClose.addEventListener('click', close);
   </script>
+
+
 </body>
 
 </html>
