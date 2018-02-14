@@ -66,13 +66,18 @@ img {
   grid-area: cta2;
 }
 
+.wrapper {
+  display: grid;
+  grid-gap: 20px;
+}
+
 /* NAVIGATION */
 .menu ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-gap: 10px;
   padding: 0;
-  margin: 20px 0;
+  /* margin: 20px 0; */
   list-style: none;
 }
 .menu a {
@@ -106,4 +111,14 @@ img {
 }
 .feature .icon {
   font-size: 50px;
+}
+
+/* ABOUT SECTION */
+.about {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  padding: 50px;
+  align-items: center;
+  justify-items: center;
+  background: beige;
 }
