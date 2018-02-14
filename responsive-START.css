@@ -85,3 +85,9 @@ img {
   padding: 10px;
   text-transform: uppercase;
 }
+
+[aria-controls="menu-list"] {
+  display: none;
+}
+
+/* MENU LIST */
