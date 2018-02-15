@@ -17,7 +17,8 @@
         <h2>Album Title</h2>
         <p class="album__artist">Artist Name</p>
         <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque repellat, iste debitis.</p>
-        <p class="album__desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, excepturi!</p>
+        <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque repellat, iste debitis.</p>
+
       </div>
     </div>
     <div class="album">
@@ -25,7 +26,9 @@
       <div class="album__details">
         <h2>Album Title</h2>
         <p class="album__artist">Artist Name</p>
-        <p class="album__desc">short.</p>
+        <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque repellat, iste debitis.</p>
+        <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque repellat, iste debitis.</p>
+
       </div>
     </div>
     <div class="album">
@@ -33,6 +36,7 @@
       <div class="album__details">
         <h2>Album Title</h2>
         <p class="album__artist">Artist Name</p>
+        <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque repellat, iste debitis.</p>
         <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque repellat, iste debitis.</p>
       </div>
     </div>
@@ -42,6 +46,7 @@
         <h2>Album Title</h2>
         <p class="album__artist">Artist Name</p>
         <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque repellat, iste debitis.</p>
+        <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque repellat, iste debitis.</p>
       </div>
     </div>
     <div class="album">
@@ -49,6 +54,7 @@
       <div class="album__details">
         <h2>Album Title</h2>
         <p class="album__artist">Artist Name</p>
+        <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque repellat, iste debitis.</p>
         <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque repellat, iste debitis.</p>
       </div>
     </div>
@@ -58,6 +64,7 @@
         <h2>Album Title</h2>
         <p class="album__artist">Artist Name</p>
         <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque repellat, iste debitis.</p>
+        <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque repellat, iste debitis.</p>
       </div>
     </div>
     <div class="album">
@@ -65,6 +72,7 @@
       <div class="album__details">
         <h2>Album Title</h2>
         <p class="album__artist">Artist Name</p>
+        <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque repellat, iste debitis.</p>
         <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque repellat, iste debitis.</p>
       </div>
     </div>
@@ -74,6 +82,7 @@
         <h2>Album Title</h2>
         <p class="album__artist">Artist Name</p>
         <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque repellat, iste debitis.</p>
+        <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque repellat, iste debitis.</p>
       </div>
     </div>
     <div class="album">
@@ -82,6 +91,7 @@
         <h2>Album Title</h2>
         <p class="album__artist">Artist Name</p>
         <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque repellat, iste debitis.</p>
+        <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque repellat, iste debitis.</p>
       </div>
     </div>
     <div class="album">
@@ -89,6 +99,7 @@
       <div class="album__details">
         <h2>Album Title</h2>
         <p class="album__artist">Artist Name</p>
+        <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque repellat, iste debitis.</p>
         <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque repellat, iste debitis.</p>
       </div>
     </div>
@@ -99,29 +110,32 @@
   <style>
     .albums {
       display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       grid-gap: 20px;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     }
 
     .album {
       display: grid;
-      background: rgba(255, 255, 255, .2);
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0, 1);
-      padding: 20px;
-      grid-template-columns: 150px 1fr;
-      grid-gap: 10px;
-      align-items: center;
-      color: white;
-      font-weight: 100;
+      background: rgba(0, 0, 0, 0.275);
+      grid-template-rows: 1fr;
+
+      padding: 10px;
+      color: aliceblue;
+      place-items: center;
     }
 
-    /* Remember Align items is up and down */
+    .album__details {
+      display: grid;
+    }
 
-    /* justfiy is left and right */
+    .album img {
+      align-self: start;
+      padding-bottom: 15px;
+    }
 
-    /* for that photo to take up  ip 100% of its allocated space */
 
-    .album__artwork {
+
+    img {
       width: 100%;
     }
   </style>
