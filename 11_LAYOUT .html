@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="../assets/style.css"> -->
+  <!-- <link rel="stylesheet" href="../assets/style.1.css"> -->
+  <title>Starter Files and Tooling Setup!</title>
+</head>
+
+<style>
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  /* body {
+    min-height: calc(100vh - 100px);
+  } */
+
+  .item {
+    background: indianred;
+    padding: 10px 50px;
+    align-items: center;
+    justify-items: center;
+
+  }
+
+  .container {
+    margin: 0 auto;
+    width: 60%;
+    font-size: 20px;
+    font-weight: bolder;
+    display: grid;
+    height: 100vh;
+    /* grid-template-columns: 1fr 10fr 1fr; */
+    grid-template-rows: 1fr 6fr 6fr 10fr;
+    grid-gap: 20px;
+    grid-template-areas: "head head head" "main main main" "main main main" "cards cards cards";
+  }
+
+  .head {
+    grid-area: head;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-gap: 10px;
+
+  }
+
+  .main {
+    grid-area: main;
+    display: grid;
+    grid-gap: 10px;
+  }
+
+  .cards {
+    grid-area: cards;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(200, 2fr));
+    grid-gap: 20px;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <div class="head">
+      <div class="item item1"> HOME</div>
+      <div class="item item2">CONTACT</div>
+      <div class="item item3">SERVICES</div>
+      <div class="item item4">PORTFOLIO</div>
+      <div class="item item5">CONNECTIONS</div>
+    </div>
+    <div class="main">
+      <div class="item item1">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its
+        layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
+        using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web
+        page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web
+        sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+        (injected humour and the like).
+
+
+      </div>
+      <div class="item item2">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its
+        layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
+        using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web
+        page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web
+        sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+        (injected humour and the like).
+
+
+      </div>
+    </div>
+    <div class="cards">
+      <div class="item item1">1</div>
+      <div class="item item2">2</div>
+      <div class="item item3">3</div>
+      <div class="item item4">4</div>
+      <div class="item item5">5</div>
+      <div class="item item6">6</div>
+      <div class="item item7">7</div>
+      <div class="item item8">8</div>
+      <div class="item item9">9</div>
+    </div>
+  </div>
+
+</body>
+
+</html>
