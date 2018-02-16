@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700" rel="stylesheet">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Document</title>
+</head>
+
+<body>
+ <div class="container">
+  <div class="head">
+   <div class="item_head item1">SUPREMe`</div>
+   <div class="nav">
+    <div class="item_head item2">NEW ARRIVALS</div>
+    <div class="item_head item3">SHIPPING</div>
+    <div class="item_head item4">CART</div>
+    <div class="item_head item5">LOGIN</div>
+   </div>
+  </div>
+
+  <div class="main">
+   <div class="_main main_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+   <div class="_main main_2">laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+    dolore eu fugiat nulla pariatur</div>
+  </div>
+  <div class="gallery">
+   <div class="_gal galleria_1">1.... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua. Neque gravida in fermentum et sollicitudin</div>
+   <div class="_gal galleria_2">2.... Consequat ac felis donec et odio pellentesque diam volutpat. Quis blandit turpis cursus in hac habitasse platea.
+    Urna et pharetra pharetra massa massa.</div>
+   <div class="_gal galleria_3">3.... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua. Neque gravida in fermentum et sollicitudin</div>
+   <div class="_gal galleria_4">4.... Consequat ac felis donec et odio pellentesque diam volutpat. Quis blandit turpis cursus in hac habitasse platea.
+    Urna et pharetra pharetra massa massa.</div>
+   <div class="_gal galleria_5">5.... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua. Neque gravida in fermentum et sollicitudin</div>
+   <div class="_gal galleria_6">6.... Consequat ac felis donec et odio pellentesque diam volutpat. Quis blandit turpis cursus in hac habitasse platea.
+    Urna et pharetra pharetra massa massa.</div>
+   <div class="_gal galleria_7">7.... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua. Neque gravida in fermentum et sollicitudin</div>
+   <div class="_gal galleria_8">8.... Consequat ac felis donec et odio pellentesque diam volutpat. Quis blandit turpis cursus in hac habitasse platea.
+    Urna et pharetra pharetra massa massa.</div>
+   <div class="_gal galleria_9">9.... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua. Neque gravida in fermentum et sollicitudin</div>
+  </div>
+ </div>
+
+ <style>
+  html {
+   box-sizing: border-box;
+  }
+
+  * {
+   box-sizing: inherit;
+  }
+
+  .container {
+   height: 100vh;
+   width: 60%;
+   margin: 0 auto;
+   display: grid;
+   grid-gap: 20px;
+   grid-template-rows: auto 1fr 1fr;
+   font-family: 'Source Sans Pro', sans-serif;
+  }
+
+  /* HEAD */
+
+  .head {
+   display: grid;
+   grid-gap: 10px;
+   grid-template-columns: 1fr 2fr;
+   justify-content: space-between;
+  }
+
+
+
+  .item_head {
+   background: #ffc600;
+   padding: 10px;
+   font-weight: bold;
+   text-align: center;
+  }
+
+  .item1 {
+   font-style: italic;
+   font-size: 60px;
+   background: red;
+   color: white;
+
+  }
+
+  /* NAV */
+
+  .nav {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+   grid-gap: 20px;
+  }
+
+  .nav .item_head {
+   display: grid;
+   align-items: center;
+   justify-items: center;
+   align-content: center;
+
+  }
+
+  .nav .item_head:hover {
+   transition: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+   transform: translateX(0);
+   color: white;
+   letter-spacing: 10px;
+   font-size: 20px;
+   background-color: red;
+
+  }
+
+  /* MAIN */
+
+  .main {
+   display: grid;
+   grid-gap: 20px;
+
+  }
+
+  ._main {
+   background: #ffc600;
+  }
+
+
+  .main_1 {
+   font-size: 50px;
+   font-weight: bold;
+   padding: 10px;
+  }
+
+  .main_2 {
+   font-size: 30px;
+   font-weight: bold;
+   padding: 0 30px;
+   text-align: right;
+   align-items: start;
+   justify-content: center;
+  }
+
+
+
+  /* GALLERY */
+
+  .gallery {
+   display: grid;
+   grid-gap: 20px;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  ._gal {
+   background: #ffc600;
+   padding: 30px;
+   text-align: right;
+  }
+
+  ._gal:before {
+   background: orangered;
+   /* opacity: .5; */
+   content: '';
+   padding: 5px;
+  }
+
+  .galleria_9 {
+   font-style: italic;
+
+   background: red;
+   color: white;
+  }
+
+
+  @media (max-width: 1000px) {}
+
+  @media (max-width: 700px) {
+
+   .nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+   }
+  }
+ </style>
+</body>
+
+</html>
