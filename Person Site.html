@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="gallery">
+      <div class="resume">
+        <pre itemscope itemtype="http://schema.org/Person">
+          <code>
+          <span class="media-not-smal ">{</span>
+          <span class="media-not-small tem ">&nbsp;&nbsp;&nbsp;&nbsp;</span>"name": "<em>Evan Scott</em>",
+          <span class="media-not-small">&nbsp;&nbsp;&nbsp;&nbsp;</span>"homeLocation": "<em itemprop="homeLocation">NYC</em>",
+          <span class="media-not-small">&nbsp;&nbsp;&nbsp;&nbsp;</span>"interests": [
+          <span class="media-not-small">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;"<em>accessibility</em>",
+          <span class="media-not-small">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;"<em>code quality</em>",
+          <span class="media-not-small">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;"<em>performance</em>",
+          <span class="media-not-small">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;"<em>semantic web</em>",
+          <span class="media-not-small">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;"<em>user experience</em>",
+          <span class="media-not-small">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;"<em>visual design</em>"
+          <span class="media-not-small">&nbsp;&nbsp;&nbsp;&nbsp;</span>],
+          <span class="media-not-small">&nbsp;&nbsp;&nbsp;&nbsp;</span>"jobTitle": "<em itemprop="jobTitle">Front End Engineer</em>",
+          <span class="media-not-small">&nbsp;&nbsp;&nbsp;&nbsp;</span>"worksFor": "<a href="https://www.zocdoc.com" rel="noopener" target="_blank"><span itemprop="worksFor">Zocdoc</span> (zocdoc.com)</a>"
+          <span class="media-not-small">}</span>
+          </code>
+      </pre>
+      </div>
+      <div class="_portfolio app_1">1.... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Neque gravida in fermentum et sollicitudin</div>
+      <div class="_portfolio app_2">2.... Consequat ac felis donec et odio pellentesque diam volutpat. Quis blandit turpis cursus in hac habitasse platea.
+        Urna et pharetra pharetra massa massa.</div>
+      <div class="_portfolio app_3">3.... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Neque gravida in fermentum et sollicitudin</div>
+      <div class="_portfolio app_4">4.... Consequat ac felis donec et odio pellentesque diam volutpat. Quis blandit turpis cursus in hac habitasse platea.
+        Urna et pharetra pharetra massa massa.</div>
+      <div class="_portfolio app_5">5.... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Neque gravida in fermentum et sollicitudin</div>
+      <div class="_portfolio app_6">5.... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Neque gravida in fermentum et sollicitudin</div>
+    </div>
+
+  </div>
+
+  <style>
+    html {
+      box-sizing: border-box;
+
+    }
+
+    * {
+      box-sizing: inherit;
+    }
+
+    body {
+      max-width: 60%;
+      margin: 0 auto;
+      background-image: url("./assets/images/topography.svg"),
+      linear-gradient(110deg, #F3F3F3, #b59afd);
+      background-size: 340px, auto;
+      min-height: calc(100vh - 100px);
+      color: white;
+    }
+
+    .container {
+      height: 100vh;
+      margin-top: 10px;
+      display: grid;
+      grid-gap: 20px;
+    }
+
+
+    /* RESUME */
+
+    .resume {
+      background: #6083FF;
+      font-family: 'Operator mono';
+    }
+
+
+    /* GALLERY */
+
+    .gallery {
+      display: grid;
+      /* grid-gap: 20px; */
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+      /* grid-gap: 10px; */
+    }
+
+    ._portfolio {
+      display: grid;
+      background: #3E4559;
+      padding: 20px;
+      place-items: center;
+
+    }
+
+    ._portfolio:hover {
+      transition-duration: 2s;
+      background: #FFC57E;
+
+    }
+
+    .gallery:hover {
+      transition-duration: 5s;
+      display: grid;
+      grid-gap: 01px;
+
+    }
+
+
+
+
+
+
+    @media (max-width: 1000px) {
+
+      .head {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+        grid-template-rows: repeat(2, 1fr);
+      }
+
+      .nav {
+        display: grid;
+        grid-gap: 20px;
+      }
+
+      .item1 {
+        font-style: italic;
+        font-size: 40px;
+        background: red;
+        color: white;
+        transform: skew(0deg);
+      }
+    }
+
+    @media (max-width: 700px) {
+
+      .nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+      }
+
+      body {
+        max-width: 95%;
+        margin: 0 auto;
+      }
+
+      .head {
+        display: grid;
+        /* grid-gap: 20px; */
+        grid-template-rows: 1fr 2fr;
+      }
+
+      .item1 {
+        font-style: italic;
+        font-size: 40px;
+        background: red;
+        color: white;
+        transform: skew(0deg);
+      }
+
+      body {
+        max-width: 95%;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</body>
+
+</html>
