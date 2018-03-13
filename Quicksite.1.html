@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700" rel="stylesheet">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="head">
+      <div class="item_head item1">NATHAN3ALs.`</div>
+    </div>
+
+    <div class="main">
+      <div class="_main main_1">I am a professional Web Developer specializing in Dynamic Web Application Development and Front-end Website Design.
+      </div>
+      <div class="_main main_2">REACT, REDUX, GRAPHQL, MONGO DB , EXPRESS, NODEJS, RESPONSIVE WEB DESIGN </div>
+    </div>
+    <div class="gallery">
+      <div class="_gal galleria_1">1.... REACT APP ONE</div>
+      <div class="_gal galleria_2">2.... REACT APP TWO</div>
+      <div class="_gal galleria_3">3.... REACT APP THREE</div>
+      <div class="_gal galleria_4">4.... REACT APP FOUR.</div>
+      <div class="_gal galleria_5">5.... REACT APP FIVE</div>
+      <div class="_gal galleria_6">6.... REACT APP SIX</div>
+      <div class="_gal galleria_7">7.... REACT APP SEVEN</div>
+      <div class="_gal galleria_9">9.... REACT APP FOURTEEN</div>
+    </div>
+  </div>
+
+  <style>
+    html {
+      box-sizing: border-box;
+
+    }
+
+    * {
+      box-sizing: inherit;
+    }
+
+    body {
+      max-width: 50%;
+      margin: 0 auto;
+    }
+
+    .container {
+      height: 100vh;
+      display: grid;
+      grid-gap: 20px;
+      grid-template-rows: auto 2fr 1fr;
+      font-family: 'Source Sans Pro', sans-serif;
+
+    }
+
+    /* HEAD */
+
+    .head {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: 1fr 2fr;
+      justify-content: space-between;
+    }
+
+
+
+    .item_head {
+      background: #ffc600;
+      padding: 3px 5px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .item1 {
+      font-style: italic;
+      font-size: 40px;
+      background: red;
+      color: white;
+      transform: skew(5deg);
+    }
+
+    /* NAV */
+
+    .nav {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+      grid-gap: 5px;
+    }
+
+    .nav .item_head {
+      display: grid;
+      align-items: center;
+      justify-items: center;
+      align-content: center;
+    }
+
+    .nav .item_head:hover {
+      transition-duration: .5s;
+      color: white;
+      letter-spacing: 8px;
+      font-size: 15px;
+      background-color: red;
+
+
+
+    }
+
+    /* MAIN */
+
+    .main {
+      display: grid;
+      grid-gap: 20px;
+
+    }
+
+    ._main {
+      background: #ffc600;
+    }
+
+
+    .main_1 {
+      font-size: 50px;
+      font-weight: bold;
+      padding: 10px;
+    }
+
+    .main_2 {
+      font-size: 30px;
+      font-weight: bold;
+      padding: 0 30px;
+      text-align: right;
+      align-items: start;
+      justify-content: center;
+    }
+
+
+
+    /* GALLERY */
+
+    .gallery {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-rows: repeat(4, 2fr);
+    }
+
+    ._gal {
+      background: #ffc600;
+      padding: 30px;
+      text-align: right;
+    }
+
+    ._gal:before {
+      background: orangered;
+      /* opacity: .5; */
+      content: '';
+      padding: 5px;
+    }
+
+    .galleria_9 {
+      font-style: italic;
+      background: red;
+      color: white;
+    }
+
+
+    @media (max-width: 1000px) {
+
+      .head {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+        grid-template-rows: repeat(2, 1fr);
+      }
+
+      .nav {
+        display: grid;
+        grid-gap: 20px;
+      }
+
+      .item1 {
+        font-style: italic;
+        font-size: 40px;
+        background: red;
+        color: white;
+        transform: skew(0deg);
+      }
+    }
+
+    @media (max-width: 700px) {
+
+      .nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+      }
+
+      body {
+        max-width: 95%;
+        margin: 0 auto;
+      }
+
+      .head {
+        display: grid;
+        /* grid-gap: 20px; */
+        grid-template-rows: 1fr 2fr;
+      }
+
+      .item1 {
+        font-style: italic;
+        font-size: 40px;
+        background: red;
+        color: white;
+        transform: skew(0deg);
+      }
+
+      body {
+        max-width: 95%;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</body>
+
+</html>
